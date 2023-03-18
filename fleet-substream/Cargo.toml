@@ -1,0 +1,23 @@
+[package]
+name = "fleet-substream"
+version = "0.1.0"
+description = "Hivemapper Fleet payout manager Substreams"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+bs58 = "0.4.0"
+wasm-bindgen = "0.2.79"
+prost = { version = "0.11.8" }
+prost-types = "0.11.8"
+hex = "0.4.3"
+substreams = "0.5.6"
+substreams-solana = "0.2.0"
+num-bigint = "0.4"
+bigdecimal = "0.3"
+pad = "0.1"
+
+[build-dependencies]
+prost-build = "0.11.8"

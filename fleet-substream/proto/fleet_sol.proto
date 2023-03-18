@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package fleet.sol.v1;
+
+message Payouts {
+  repeated Payout payouts = 1;
+}
+
+message AccountCreations {
+  repeated AccountCreation creations = 1;
+}
+
+message AccountCreation {
+  string spl_account = 1;
+  string owner = 2;
+}
+
+message Payout {
+  string transaction_id = 1;
+  PayoutAccount account_one = 2;
+  PayoutAccount account_two = 3;
+}
+
+message PayoutAccount {
+  string spl_account = 1;
+  optional string payout_address = 2;
+  optional string amount = 3;
+}
